@@ -6,60 +6,56 @@
   <title>3G Brasil — Anjo da Guarda</title>
   <meta name="description" content="3G Brasil - Aplicativo Anjo da Guarda: segurança e comunicação de emergência.">
   <style>
+    :root{
+      --bg:#ffffff; --ink:#111; --muted:#666; --card:#fafafa; --line:#eee; --pill:#eef;
+      --maxw:820px;
+    }
     *{box-sizing:border-box}
     body{
-      font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;
-      margin:0; line-height:1.55; color:#111;
-      background:#fff;
+      font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+      margin:40px auto; max-width:var(--maxw); line-height:1.55; color:var(--ink); background:var(--bg);
+      padding:0 16px;
     }
-
-    /* Cabeçalho com logo ENORME e centralizado */
     header.brand{
-      display:block;
-      text-align:center;
-      padding:32px 16px 12px;
+      display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; margin-bottom:28px;
     }
     .logo{
-      display:block;
-      margin:0 auto 12px;
-      width:min(95vw, 2000px);   /* <<< AQUI controla o tamanho máximo do logo */
-      height:auto;
+      display:block; height:auto;
+      /* logo GRANDE e responsivo */
+      width: clamp(240px, 60vw, 560px);
+      /* sombra leve para destacar */
+      filter: drop-shadow(0 6px 18px rgba(0,0,0,.15));
     }
-    h1{margin:0;font-weight:700;font-size:clamp(28px,5vw,44px)}
-    .tag{display:inline-block;background:#eef;padding:6px 10px;border-radius:8px;margin-top:8px;font-size:14px}
-
-    /* Conteúdo centralizado em coluna confortável */
-    main.content{max-width:820px;margin:0 auto;padding:0 16px}
-    .card{background:#fafafa;border:1px solid #eee;border-radius:12px;padding:16px;margin:12px 0}
-    footer{margin:40px 0 32px;text-align:center;color:#666;font-size:14px}
+    h1{margin:0; font-size: clamp(22px, 3.6vw, 34px)}
+    .tag{display:inline-block;background:var(--pill);padding:6px 10px;border-radius:8px;margin-top:6px;font-size:14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}
+    footer{margin-top:32px;font-size:14px;color:var(--muted); text-align:center}
+    a{color:inherit}
   </style>
 </head>
 <body>
   <header class="brand">
-    <img src="logo.png?v=2" alt="3G Brasil" class="logo">
+    <img src="logo.png" alt="3G Brasil" class="logo" />
     <h1>3G Brasil — Anjo da Guarda</h1>
     <div class="tag">Aplicativo Anjo da Guarda</div>
   </header>
 
-  <main class="content">
-    <section class="card">
-      <h2>Sobre</h2>
-      <p>O <strong>Anjo da Guarda</strong> é um aplicativo de segurança pessoal que
-         envia alertas por SMS, WhatsApp, Telegram e e-mail, incluindo localização em emergências.</p>
-    </section>
+  <section class="card">
+    <h2>Sobre</h2>
+    <p>O <strong>Anjo da Guarda</strong> é um aplicativo de segurança pessoal que envia alertas por SMS, WhatsApp, Telegram e e-mail, incluindo localização em emergências.</p>
+  </section>
 
-    <section class="card">
-      <h2>Contato</h2>
-      <p>E-mail: <a href="mailto:contato@3gbrasil.com.br">contato@3gbrasil.com.br</a><br>
-         WhatsApp comercial: +55 11 96170-4582</p>
-    </section>
+  <section class="card">
+    <h2>Contato</h2>
+    <p>E-mail: <a href="mailto:contato@3gbrasil.com.br">contato@3gbrasil.com.br</a><br>
+       WhatsApp comercial: +55 11 96170-4582
+    </p>
+  </section>
 
-    <section class="card">
-      <h2>Privacidade</h2>
-      <p>Coletamos dados mínimos necessários ao alerta (como localização). Não vendemos dados.
-         Para remoção ou dúvidas, use o contato acima.</p>
-    </section>
-  </main>
+  <section class="card">
+    <h2>Privacidade</h2>
+    <p>Coletamos dados mínimos necessários ao alerta (como localização). Não vendemos dados. Para remoção ou dúvidas, use o contato acima.</p>
+  </section>
 
   <footer>© 2025 3G Brasil. Todos os direitos reservados.</footer>
 </body>
