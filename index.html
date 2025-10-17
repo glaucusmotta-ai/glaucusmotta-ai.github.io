@@ -14,10 +14,11 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>3G Brasil</h1>
-    <div class="tag">Aplicativo Anjo da Guarda</div>
-  </header>
+ <header class="brand">
+  <img src="logo.png" alt="3G Brasil" class="logo">
+  <h1 class="sr-only">3G Brasil — Anjo da Guarda</h1>
+  <div class="tag">Aplicativo Anjo da Guarda</div>
+ </header>
 
   <section class="card">
     <h2>Sobre</h2>
@@ -40,3 +41,7 @@
   <footer>© 2025 3G Brasil. Todos os direitos reservados.</footer>
 </body>
 </html>
+header.brand{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.logo{height:52px;width:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
